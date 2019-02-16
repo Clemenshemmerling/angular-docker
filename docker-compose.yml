@@ -1,0 +1,11 @@
+version: "2"
+services:
+
+  ionic:
+    build: ./node
+    volumes:
+      -  ./app:/home/node
+    ports:
+      - "8100:8100"
+      - "35729:35729"
+    command: ionic serve --all
